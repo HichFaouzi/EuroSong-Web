@@ -16,7 +16,7 @@
     &.error{
         @include alert(255, 0, 0);
     }
-    &.succes{
+    &.success{
         @include alert(0, 255, 0);
     }
 }
