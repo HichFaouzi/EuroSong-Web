@@ -10,6 +10,18 @@
 
   </nav>
     <h1> Eurosong Festival </h1>
+
+  <div class="c-feedback warning">
+    er is een fout gebeurd
+  </div>
+
+  <div class="c-feedback error">
+    tis kapot
+  </div>
+
+  <div class="c-feedback succes">
+    tis gelukt
+  </div>
   </div>
 </template>
 
