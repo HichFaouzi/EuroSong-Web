@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav class="c-nav">
+    <ul class="c-nav-list">
+      <li class="c-nav-list-item"> Home </li>
+      <li class="c-nav-list-item"> About Us </li>
+      <li class="c-nav-list-item"> Contact </li>
+    
+    </ul>
+
+  </nav>
+    <h1> Eurosong Festival </h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//importing the style of for the app.
+import style from './scss/style.scss';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

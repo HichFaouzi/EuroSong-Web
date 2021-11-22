@@ -1,0 +1,12 @@
+@import './settings/colors.scss';
+@import './settings/font-sizes.scss';
+body{
+    background-color: $primary-blue;
+    color: $primary-white;
+    margin: 0;
+}
+
+//Components
+@import "./components/nav.scss";
+
+
