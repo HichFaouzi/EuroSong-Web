@@ -31,10 +31,6 @@
         <button @click="goToPage('home')">
             Go to home
         </button>
-        
-        <div id="frame">
-
-        </div>
 
     </div>
 </template>
