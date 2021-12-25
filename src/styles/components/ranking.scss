@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(230, 244, 245);
+}
+
+#container{
+    text-align: center;
+}
+
+table{
+    margin: auto;
+}
+
+
+
+table{
+    border-spacing: 0;
+    tr{
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th{
+            border: 1px solid black;
+        }
+    }
+}

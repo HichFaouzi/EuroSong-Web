@@ -1,65 +1,54 @@
 <template>
   <div id="app">
-    <Navigation/>
-    <h1> Eurosong Festival </h1>
-    <counter/>
-  <feedback
-    v-for="(message, index) in messages" :key= "index"
-    :message="message.message"
-    :classType="message.classType"
-  />
+    <!-- Homepagina -->
+    <homepage
+      v-if="page == 'home'"
 
-  <button @click="addMessage">
-    Add Message
-  </button>
+      @change-page="goToPage"
+    />
+
+    <!-- Game -->
+    <gamepage
+      v-if="page == 'game'"
+      @change-page="goToPage"
+    />
+
+    <!-- Ranking -->
+    
+    <rankingpage
+      v-if="page == 'ranking'"
+      @change-page="goToPage"
+    />
 
   </div>
 </template>
 
 <script>
-//importing the style of for the app.
-import style from './scss/style.scss';
-
-//Components
-import Navigation from './components/Navigation.vue';
-import Counter from './components/Counter.vue';
-import Feedback from './components/Feedback.vue';
+import Homepage from './pages/Homepage.vue';
+import Rankingpage from './pages/RankingPage.vue';
+import Gamepage from './pages/Gamepage.vue';
 
 //App component
 export default {
   name: 'App',
   components :{
-    Navigation,
-    Counter,
-    Feedback
+    Homepage,
+    Gamepage,
+    Rankingpage
     },
-    data(){
-      return{
-        messages: [
-          {
-            message: "er is een fout gebeurd",
-            classType:"warning"
-          },
-          {
-            message: "tis kapot",
-            classType:"error"
-          },
-          {
-            message: "tis gelukt",
-            classType:"success"
-          }
-        ]
-        }
-      },
-      methods: {
-        addMessage(){
-            this.messages.push(
-              {
-                messages: "Hallo nieuwe feedback item", 
-                classType: "Success"
-              })
-          }
-        }
+  data(){
+    return {
+      page: "ranking"
+      }
+    },
+  methods: {
+      goToPage(page){
+        this.page = page;
+      }
+    }
 }
 </script>
 
+<style lang="scss">
+  @import "./styles/style.scss";
+</style>
