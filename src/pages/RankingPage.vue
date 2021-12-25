@@ -110,10 +110,6 @@ export default({
                         }
                     });
                 });
-        },
-        Listen(id){
-            this.activeSong = id;
-            console.log(id);
         }
     }
 })
